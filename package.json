@@ -2,7 +2,7 @@
   "private": true,
   "sideEffects": false,
   "scripts": {
-    "build": "npm run migrate && npm run build:css && remix build",
+    "build": "npm run build:css && remix build && npm run migrate",
     "build:css": "tailwindcss -m -i ./styles/app.css -o app/styles/app.css",
     "dev": "run-p \"dev:*\"",
     "dev:node": "cross-env NODE_ENV=development nodemon --exec 'remix build && ts-node entrypoints/server.ts' --watch entrypoints/server.ts",
